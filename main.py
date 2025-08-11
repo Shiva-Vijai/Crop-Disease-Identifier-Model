@@ -120,7 +120,6 @@ def img_prediction(crop_name, image_path):
     confidence = np.max(output_data) * 100
 
     solution = disease_solutions[crop_name][predicted_label]
-    print(f'solution: {solution}')
 
     return {
         "label": f"{crop_name} class: {predicted_label}",
