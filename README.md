@@ -37,7 +37,7 @@ A simple application for detecting diseases in **Rice**, **Wheat**, **Tomato**, 
 
 ## ⚙️ How It Works
 1. User uploads a leaf image.
-2. Model predicts disease & confidence score.
+2. Model predicts disease & displays confidence score.
 3. Displays a short solution for treatment.
 
 ---
