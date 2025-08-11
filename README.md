@@ -55,6 +55,6 @@ A simple application for detecting diseases in **Rice**, **Wheat**, **Tomato**, 
 ## 👥 Contributors
 
 - [Shiva Vijai](https://github.com/Shiva-Vijai)
-- [Akshat]()
+- [Akshat](https://github.com/ItsYaBoyAK)
 - [Shreyan]()
 - [Adarsh]()
