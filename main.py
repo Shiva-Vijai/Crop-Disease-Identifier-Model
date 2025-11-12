@@ -16,60 +16,190 @@ def allowed_file(filename):
 
 disease_solutions = {
     "rice": {
-        'Bacterial Leaf Blight': 'Use resistant varieties, ensure proper field drainage, and apply recommended bactericides.',
-        'Brown Spot': 'Apply balanced fertilizers, avoid water stress, and use fungicides if severe.',
-        'Healthy': 'No issues detected — maintain good irrigation and nutrient management.',
-        'Leaf Blast': 'Plant resistant varieties, avoid excessive nitrogen, and use fungicides as needed.',
-        'Leaf Scald': 'Improve water management and remove infected debris.',
-        'Narrow Brown Leaf': 'Apply balanced nutrients and improve drainage; consider fungicides if severe.',
-        'Neck Blast': 'Plant resistant varieties, manage nitrogen, and apply fungicide at booting stage.',
-        'Rice Hispa': 'Handpick beetles early, avoid over-fertilization, and use insecticides if infestation is high.',
-        'Sheath Blight': 'Reduce plant density, manage nitrogen, and use fungicides at early symptoms.',
-        'tungro': 'Control green leafhopper vector with insecticides and use resistant varieties.'
+        'Bacterial Leaf Blight': {
+            "cause": "Caused by Xanthomonas oryzae pv. oryzae; spreads through infected seeds, rain splash, and standing water under humid conditions.",
+            "solution": "Use resistant varieties (e.g., IR64, ADT38), maintain good drainage, and spray Streptomycin 100 ppm + Copper oxychloride 0.3% at early infection stage."
+        },
+        'Brown Spot': {
+            "cause": "Caused by Bipolaris oryzae fungus, favored by nutrient deficiency and humid weather.",
+            "solution": "Apply balanced fertilizers (especially nitrogen and potassium), maintain proper water level, and spray Mancozeb 0.25% or Carbendazim 0.1%."
+        },
+        'Healthy': {
+            "cause": "No signs of infection or nutrient stress.",
+            "solution": "Maintain good irrigation, balanced fertilizer use, and regular monitoring for pests and diseases."
+        },
+        'Leaf Blast': {
+            "cause": "Caused by Magnaporthe oryzae fungus; favored by excess nitrogen and high humidity.",
+            "solution": "Use resistant varieties (CO 43, ADT 44), avoid excess nitrogen, and spray Tricyclazole 0.06% or Isoprothiolane 0.1%."
+        },
+        'Leaf Scald': {
+            "cause": "Caused by Microdochium oryzae under poor drainage and humid conditions.",
+            "solution": "Improve drainage, remove infected residues, and apply Propiconazole 0.1% if infection spreads."
+        },
+        'Narrow Brown Leaf': {
+            "cause": "Caused by Cercospora oryzae, often associated with potassium deficiency and high humidity.",
+            "solution": "Apply potassium fertilizer, maintain field hygiene, and spray Mancozeb 0.25% if severe."
+        },
+        'Neck Blast': {
+            "cause": "Same fungus as leaf blast (Magnaporthe oryzae), attacks panicle neck during flowering.",
+            "solution": "Apply Tricyclazole 0.06% or Edifenphos 0.1% at booting stage and repeat after 10 days."
+        },
+        'Rice Hispa': {
+            "cause": "Caused by Dicladispa armigera beetle; adults scrape leaves and larvae feed within them.",
+            "solution": "Handpick beetles early, avoid over-fertilization, and spray Chlorpyrifos 0.05% or Quinalphos 0.05%."
+        },
+        'Sheath Blight': {
+            "cause": "Caused by Rhizoctonia solani fungus in dense and nitrogen-rich fields.",
+            "solution": "Reduce plant density, manage nitrogen, and apply Validamycin 0.25% or Hexaconazole 0.1% at early infection."
+        },
+        'tungro': {
+            "cause": "Caused by rice tungro virus transmitted by green leafhopper (Nephotettix virescens).",
+            "solution": "Use resistant varieties (ASD 16), remove infected plants, and control leafhopper using Imidacloprid 0.05%."
+        }
     },
 
     "wheat": {
-        'Aphid': 'Spray insecticides and encourage natural predators like lady beetles.',
-        'Black Rust': 'Plant resistant varieties and spray fungicides at early detection.',
-        'Blast': 'Avoid late planting, ensure proper drainage, and apply fungicides.',
-        'Brown Rust': 'Use resistant varieties and apply fungicides at first sign.',
-        'Common Root Rot': 'Practice crop rotation and use seed treatment fungicides.',
-        'Fusarium Head Blight': 'Use resistant varieties, avoid overhead irrigation during flowering, and apply fungicide.',
-        'Healthy': 'No disease detected — maintain regular monitoring and good field hygiene.',
-        'Leaf Blight': 'Use resistant seeds and apply fungicides if needed.',
-        'Mildew': 'Ensure good air circulation and apply fungicides.',
-        'Mite': 'Use miticides and avoid water stress.',
-        'Septoria': 'Rotate crops, remove debris, and use fungicides.',
-        'Smut': 'Use certified treated seeds and resistant varieties.',
-        'Stem Fly': 'Use insecticides and avoid staggered sowing.',
-        'Tan Spot': 'Remove crop debris and apply fungicides early.',
-        'Yellow Rust': 'Plant resistant varieties and spray fungicides promptly.'
+        'Aphid': {
+            "cause": "Infestation by Sitobion avenae aphids sucking sap during grain filling stage.",
+            "solution": "Spray Imidacloprid 0.03% or Thiamethoxam 0.025%, and encourage natural predators like ladybird beetles."
+        },
+        'Black Rust': {
+            "cause": "Caused by Puccinia graminis fungus; spreads via wind-borne spores in warm, moist conditions.",
+            "solution": "Plant resistant varieties (HD 2967), and spray Propiconazole 0.1% or Mancozeb 0.25% at early symptoms."
+        },
+        'Blast': {
+            "cause": "Caused by Magnaporthe oryzae (wheat pathotype), prevalent in humid regions with delayed sowing.",
+            "solution": "Avoid late planting, ensure proper drainage, and spray Tricyclazole 0.06% at heading stage."
+        },
+        'Brown Rust': {
+            "cause": "Caused by Puccinia recondita fungus; develops in cool, moist weather.",
+            "solution": "Grow resistant varieties, remove volunteer wheat plants, and apply Propiconazole 0.1%."
+        },
+        'Common Root Rot': {
+            "cause": "Caused by Bipolaris sorokiniana and Fusarium species in dry or compacted soils.",
+            "solution": "Rotate crops, use well-drained soil, and treat seeds with Thiram 2.5 g/kg before sowing."
+        },
+        'Fusarium Head Blight': {
+            "cause": "Caused by Fusarium graminearum under high humidity during flowering.",
+            "solution": "Spray Carbendazim 0.1% at flowering, avoid overhead irrigation, and rotate with non-cereal crops."
+        },
+        'Healthy': {
+            "cause": "No visible pest or disease symptoms.",
+            "solution": "Continue proper irrigation, fertilization, and weed control."
+        },
+        'Leaf Blight': {
+            "cause": "Caused by Bipolaris sorokiniana; worsens with late sowing and nutrient deficiency.",
+            "solution": "Apply Mancozeb 0.25%, improve nitrogen management, and use clean seed."
+        },
+        'Mildew': {
+            "cause": "Caused by Blumeria graminis; thrives in cool, humid climates.",
+            "solution": "Ensure air circulation and spray Wettable Sulfur 0.3% or Hexaconazole 0.1%."
+        },
+        'Mite': {
+            "cause": "Caused by Aceria tosichella mites during hot, dry weather.",
+            "solution": "Apply Sulfur dust 20–25 kg/ha and ensure adequate irrigation."
+        },
+        'Septoria': {
+            "cause": "Caused by Septoria tritici fungus, infecting leaves during prolonged wetness.",
+            "solution": "Remove crop residues, rotate crops, and spray Propiconazole 0.1% or Mancozeb 0.25%."
+        },
+        'Smut': {
+            "cause": "Seed-borne disease caused by Ustilago tritici fungus.",
+            "solution": "Treat seeds with Carboxin 2.5 g/kg or Tebuconazole 1 g/kg before planting."
+        },
+        'Stem Fly': {
+            "cause": "Caused by Atherigona naqvii fly; larvae bore into wheat stems.",
+            "solution": "Spray Dimethoate 0.05% at early infestation and avoid staggered sowing."
+        },
+        'Tan Spot': {
+            "cause": "Caused by Pyrenophora tritici-repentis fungus surviving on debris.",
+            "solution": "Remove debris, rotate crops, and spray Mancozeb 0.25% at first sign."
+        },
+        'Yellow Rust': {
+            "cause": "Caused by Puccinia striiformis fungus; common in cool, moist conditions.",
+            "solution": "Grow resistant varieties (HD 3086) and spray Propiconazole 0.1% or Mancozeb 0.25%."
+        }
     },
 
     "tomato": {
-        'bacterial spot': 'Remove infected leaves, avoid overhead watering, and apply copper-based sprays.',
-        'early blight': 'Rotate crops, mulch plants, and use fungicides.',
-        'healthy': 'No disease found — maintain proper care and regular inspection.',
-        'late blight': 'Remove affected plants and apply fungicides immediately.',
-        'leaf mold': 'Improve ventilation, reduce humidity, and apply fungicides.',
-        'septoria leaf spot': 'Remove infected leaves and apply fungicides.',
-        'spider mites': 'Spray water on undersides of leaves and use miticides.',
-        'target spot': 'Remove infected foliage and apply fungicides.',
-        'mosaic virus': 'Remove infected plants and control insect vectors.',
-        'leaf curl virus': 'Control whiteflies and remove infected plants.'
+        'bacterial spot': {
+            "cause": "Caused by Xanthomonas campestris pv. vesicatoria; spreads through splashing water and contaminated seeds.",
+            "solution": "Remove infected leaves, avoid overhead irrigation, and spray Copper oxychloride 0.3% or Streptocycline 100 ppm."
+        },
+        'early blight': {
+            "cause": "Caused by Alternaria solani fungus, common in warm and humid climates.",
+            "solution": "Rotate crops, prune lower leaves, and spray Mancozeb 0.25% or Chlorothalonil 0.2%."
+        },
+        'healthy': {
+            "cause": "No signs of stress or infection.",
+            "solution": "Maintain optimal nutrition, irrigation, and regular pest monitoring."
+        },
+        'late blight': {
+            "cause": "Caused by Phytophthora infestans, spreads in cool, moist environments.",
+            "solution": "Remove affected plants, avoid overhead watering, and spray Metalaxyl + Mancozeb 0.25%."
+        },
+        'leaf mold': {
+            "cause": "Caused by Fulvia fulva fungus, often in humid greenhouses.",
+            "solution": "Improve ventilation, reduce humidity, and spray Chlorothalonil 0.2% or Copper oxychloride 0.3%."
+        },
+        'septoria leaf spot': {
+            "cause": "Caused by Septoria lycopersici fungus; spreads by rain splash and tools.",
+            "solution": "Remove infected leaves and spray Mancozeb 0.25% weekly until control."
+        },
+        'spider mites': {
+            "cause": "Caused by Tetranychus urticae mites in hot, dry weather.",
+            "solution": "Spray Abamectin 0.002% or Dicofol 0.05%, and keep humidity up."
+        },
+        'target spot': {
+            "cause": "Caused by Corynespora cassiicola fungus under high humidity.",
+            "solution": "Remove infected foliage and spray Mancozeb 0.25% or Copper oxychloride 0.3%."
+        },
+        'mosaic virus': {
+            "cause": "Caused by Tobacco mosaic virus, spreads via contact or insect vectors.",
+            "solution": "Remove infected plants, disinfect tools, and control aphids/whiteflies."
+        },
+        'leaf curl virus': {
+            "cause": "Caused by Tomato leaf curl virus transmitted by whiteflies.",
+            "solution": "Spray Imidacloprid 0.03%, remove infected plants, and use resistant hybrids."
+        }
     },
 
     "cotton": {
-        'aphids': 'Spray insecticides and encourage natural predators.',
-        'army worm': 'Handpick larvae early and apply biological or chemical control.',
-        'bacterial blight': 'Use resistant varieties and avoid overhead irrigation.',
-        'cotton boll rot': 'Ensure proper drainage and use fungicides.',
-        'green cotton boll': 'Harvest timely and avoid prolonged field exposure.',
-        'healthy': 'No problems detected — maintain optimal growth conditions.',
-        'powdery mildew': 'Use resistant varieties and apply sulfur-based fungicides.',
-        'target spot': 'Remove infected leaves and apply fungicides.'
+        'aphids': {
+            "cause": "Caused by Aphis gossypii feeding on sap, especially during early stages.",
+            "solution": "Spray Imidacloprid 0.03% or Thiamethoxam 0.025% and conserve ladybird beetles."
+        },
+        'army worm': {
+            "cause": "Caused by Spodoptera litura larvae feeding on leaves and bolls.",
+            "solution": "Handpick larvae early, install pheromone traps, and spray Emamectin Benzoate 0.002%."
+        },
+        'bacterial blight': {
+            "cause": "Caused by Xanthomonas citri pv. malvacearum, spreads via rain and infected seed.",
+            "solution": "Use resistant varieties, avoid overhead irrigation, and treat seeds with Copper oxychloride 0.3%."
+        },
+        'cotton boll rot': {
+            "cause": "Caused by fungi like Rhizopus and Fusarium in humid, poorly drained fields.",
+            "solution": "Ensure proper drainage, spray Carbendazim 0.1%, and harvest timely."
+        },
+        'green cotton boll': {
+            "cause": "Due to delayed harvest or bollworm damage causing unopening bolls.",
+            "solution": "Harvest timely, control bollworms, and maintain uniform irrigation."
+        },
+        'healthy': {
+            "cause": "No pest or fungal presence.",
+            "solution": "Continue optimal field conditions and pest monitoring."
+        },
+        'powdery mildew': {
+            "cause": "Caused by Leveillula taurica fungus; thrives in dry, cool conditions.",
+            "solution": "Spray Wettable Sulfur 0.3% or Hexaconazole 0.1%, and avoid dense planting."
+        },
+        'target spot': {
+            "cause": "Caused by Corynespora cassiicola fungus under humid weather.",
+            "solution": "Remove infected leaves and apply Mancozeb 0.25% or Carbendazim 0.1%."
+        }
     }
 }
+
 
 
 def img_prediction(crop_name, image_path):
@@ -119,12 +249,19 @@ def img_prediction(crop_name, image_path):
     predicted_label = labels(predicted_index)
     confidence = np.max(output_data) * 100
 
-    solution = disease_solutions[crop_name][predicted_label]
+    prediction_result = {
+    "cause": disease_solutions[crop_name][predicted_label]["cause"],
+    "solution": disease_solutions[crop_name][predicted_label]["solution"]
+}
+    solution = disease_solutions[crop_name][predicted_label]["solution"]
+    cause= disease_solutions[crop_name][predicted_label]["cause"]
 
     return {
         "label": f"{crop_name} class: {predicted_label}",
         "confidence": f"{confidence:.2f}",
-        "solution": solution
+        "solution": solution,
+        'cause': cause,
+        "prediction_result":prediction_result
     }
 
 @app.route('/')
